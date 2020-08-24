@@ -14,9 +14,9 @@
             filePath = "CustomAlert/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "createAlertWithActions(actions:)"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "createLightAlertWithActions(actions:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -24,7 +24,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "F6E407D7-058C-40EC-B102-4E1AA9AE893C"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CustomAlert/ViewController.swift"
@@ -34,6 +34,118 @@
             endingLineNumber = "34"
             landmarkName = "showLightAlert()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "90BBBDD5-8139-4B28-A425-49130D85D61D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CustomAlert/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "showLightAlert()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "92749F56-86EF-4C9B-966D-78669CB0E13D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CustomAlert/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "showLightAlert()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "92749F56-86EF-4C9B-966D-78669CB0E13D - d3784b52f74155a"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CustomAlert.ViewController.showLightAlert() -&gt; ()"
+                  moduleName = "CustomAlert"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/student6/Downloads/CustomAlert/CustomAlert/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "287">
+               </Location>
+               <Location
+                  uuid = "92749F56-86EF-4C9B-966D-78669CB0E13D - 672915a6ece752d"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in CustomAlert.ViewController.showLightAlert() -&gt; ()"
+                  moduleName = "CustomAlert"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/student6/Downloads/CustomAlert/CustomAlert/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "53">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3F5C628D-46D6-47DC-BE53-6AAD0B1F5CD2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CustomAlert/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "showLightAlert()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3F5C628D-46D6-47DC-BE53-6AAD0B1F5CD2 - d3784b52f74155a"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CustomAlert.ViewController.showLightAlert() -&gt; ()"
+                  moduleName = "CustomAlert"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/student6/Downloads/CustomAlert/CustomAlert/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "287">
+               </Location>
+               <Location
+                  uuid = "3F5C628D-46D6-47DC-BE53-6AAD0B1F5CD2 - 672915a6ece752d"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in CustomAlert.ViewController.showLightAlert() -&gt; ()"
+                  moduleName = "CustomAlert"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/student6/Downloads/CustomAlert/CustomAlert/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "53">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

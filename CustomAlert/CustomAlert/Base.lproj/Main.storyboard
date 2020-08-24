@@ -31,7 +31,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="darkAlertAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="elT-99-meT"/>
+                                    <action selector="darkAlertAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="ky9-Ok-iSI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbO-0y-Wth">
@@ -41,7 +41,7 @@
                                     <constraint firstAttribute="width" constant="240" id="GgL-Dr-EZ7"/>
                                     <constraint firstAttribute="height" constant="60" id="avm-jp-xJ5"/>
                                 </constraints>
-                                <state key="normal" title="Show Alert w/ Three Buttons">
+                                <state key="normal" title="Show Alert With Three Buttons">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -50,7 +50,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="alertWithThreeButtonsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bbo-II-4ah"/>
+                                    <action selector="alertWithThreeButtonsAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="5y1-zc-aTM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfh-Ph-lg1">
@@ -69,7 +69,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="lightAlertAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CO9-Ot-nRx"/>
+                                    <action selector="lightAlertAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="lM7-h9-eaB"/>
                                 </connections>
                             </button>
                         </subviews>
