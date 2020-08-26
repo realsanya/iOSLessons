@@ -11,15 +11,17 @@ import UIKit
 
 enum ActionStyle {
     case normal
+    case normalDark
     case destructive
     case destructiveDark
-    case normalDark
+    case positive
+    case positiveDark
     
     var titleColor: UIColor {
         switch self {
-        case .destructive, .destructiveDark, .normalDark:
+        case .destructive, .positive, .normal:
             return UIColor.white
-        case .normal:
+        case .normalDark, .destructiveDark, .positiveDark:
             return UIColor.black
         }
     }
@@ -28,16 +30,18 @@ enum ActionStyle {
         switch self {
         case .normal:
             return UIColor.darkGray.withAlphaComponent(0.5)
-        case .destructive, .destructiveDark:
-            return UIColor.red
         case .normalDark:
             return UIColor.lightGray
+        case .destructive, .destructiveDark:
+            return UIColor.red
+        case .positive, .positiveDark:
+            return UIColor.green
         }
     }
     
     var highlightedTitileColor: UIColor {
         switch self {
-        case .normal, .destructive, .destructiveDark, .normalDark:
+        case .normal, .destructive, .destructiveDark, .normalDark, .positive, .positiveDark:
             return self.titleColor.withAlphaComponent(0.6)
         }
     }

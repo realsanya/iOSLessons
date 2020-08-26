@@ -8,6 +8,7 @@
 
 import UIKit
 
+//MARK: -AlertStyle
 enum AlertStyle{
     case normal
     case dark
@@ -30,6 +31,7 @@ enum AlertStyle{
         }
     }
 }
+//MARK: -
 
 class CustomAlertViewController: UIViewController {
 
@@ -93,6 +95,8 @@ class CustomAlertViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+ //MARK: -
+    
     @objc private func animateAlert(){
         backdropView.alpha = 0.0
         UIView.animate(withDuration: 0.1, animations: {
@@ -102,7 +106,6 @@ class CustomAlertViewController: UIViewController {
         })
     }
     
-    //MARK: -constraints
     private func setUpUI(){
         view.addSubview(backdropView)
         view.addSubview(containerView)
@@ -131,7 +134,7 @@ class CustomAlertViewController: UIViewController {
             actionsStackView.topAnchor.constraint(equalTo: titleStackView.bottomAnchor, constant: 8.0),
             actionsStackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -24.0),
             actionsStackView.leftAnchor.constraint(equalTo: containerView.leftAnchor, constant: 24.0),
-            actionsStackView.rightAnchor.constraint(equalTo: containerView.rightAnchor, constant: 24.0)
+            actionsStackView.rightAnchor.constraint(equalTo: containerView.rightAnchor, constant: -24.0)
         ])
         
         for action in actions {

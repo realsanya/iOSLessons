@@ -13,11 +13,6 @@ class ViewController: UIViewController {
     @IBOutlet var lightAlertButton: UIButton!
     @IBOutlet var darkAlertButton: UIButton!
     @IBOutlet var alertWithThreeButtons: UIButton!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
 
     @IBAction func lightAlertAction() {
         showLightAlert()
@@ -32,12 +27,12 @@ class ViewController: UIViewController {
     }
     
     func showLightAlert() {
-        let yesAction = Action(with: "Yes", style: .normal) {[weak self] in
+        let yesAction = Action(with: "Yes", style: .positiveDark) {[weak self] in
             print("Yes pressed")
             self?.dismiss(animated: true, completion: nil)
         }
         
-        let noAction = Action(with: "No", style: .normal) { [weak self] in
+        let noAction = Action(with: "No", style: .destructiveDark) { [weak self] in
             print("No pressed")
             self?.dismiss(animated: true, completion: nil)
         }
@@ -50,12 +45,12 @@ class ViewController: UIViewController {
     }
     
     func showDarkAlert() {
-        let yesAction = Action(with: "Yes", style: .normalDark) {[weak self] in
+        let yesAction = Action(with: "Yes", style: .positive) {[weak self] in
                 print("Yes pressed")
                 self?.dismiss(animated: true, completion: nil)
             }
             
-            let noAction = Action(with: "No", style: .normalDark) { [weak self] in
+            let noAction = Action(with: "No", style: .destructive) { [weak self] in
                 print("No pressed")
                 self?.dismiss(animated: true, completion: nil)
             }
@@ -68,17 +63,17 @@ class ViewController: UIViewController {
     }
     
     func showAlertWithThreeButtons(){
-        let yesAction = Action(with: "Yes", style: .normal) {[weak self] in
+        let yesAction = Action(with: "Yes", style: .positiveDark) {[weak self] in
             print("Yes pressed")
             self?.dismiss(animated: true, completion: nil)
         }
         
-        let maybeAction = Action(with: "Maybe", style: .normal) { [weak self] in
+        let maybeAction = Action(with: "Maybe", style: .normalDark) { [weak self] in
             print("Maybe pressed")
             self?.dismiss(animated: true, completion: nil)
         }
         
-        let noAction = Action(with: "No", style: .normal) { [weak self] in
+        let noAction = Action(with: "No", style: .destructiveDark) { [weak self] in
             print("No pressed")
             self?.dismiss(animated: true, completion: nil)
         }
@@ -90,17 +85,17 @@ class ViewController: UIViewController {
     }
     
     private func createLightAlertWithActions(actions: [Action]) -> CustomAlertViewController{
-        let alertVC = CustomAlertViewController(withTitle: "Hi! I'm Light Alert", message:"Do you like how I look?", actions: actions, axis: .horizontal)
+        let alertVC = CustomAlertViewController(withTitle: "Hi! I'm Light Alert", message:"Do you like how I look?", actions: actions, axis: .horizontal, style: .normal)
         return alertVC
     }
     
     private func createDarkAlertWithActions(actions: [Action]) -> CustomAlertViewController{
-        let alertVC = CustomAlertViewController(withTitle: "Hi! I'm Dark Alert", message:"Do you like how I look?", actions: actions, axis: .horizontal)
+        let alertVC = CustomAlertViewController(withTitle: "Hi! I'm Dark Alert", message:"Do you like how I look?", actions: actions, axis: .horizontal, style: .dark)
         return alertVC
     }
     
     private func createAlertWithThreeActions(actions: [Action]) -> CustomAlertViewController{
-          let alertVC = CustomAlertViewController(withTitle: "Hi! I'm Alert With Three Buttons", message:"Do you like how I look?", actions: actions, axis: .vertical)
+        let alertVC = CustomAlertViewController(withTitle: "Hi! I'm Alert With Three Buttons", message:"Do you like how I look?", actions: actions, axis: .vertical, style: .normal)
           return alertVC
       }
     
