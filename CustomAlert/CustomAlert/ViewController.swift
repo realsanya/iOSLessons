@@ -27,77 +27,34 @@ class ViewController: UIViewController {
     }
     
     func showLightAlert() {
-        let yesAction = Action(with: "Yes", style: .positiveDark) {[weak self] in
-            print("Yes pressed")
-            self?.dismiss(animated: true, completion: nil)
-        }
+        let customLightAlert = CustomAlertViewController(withTitle: "Hi! I'm Light Alert", message:"Do you like how I look?", axis: .horizontal, style: .light)
+        customLightAlert.addAction(with: "Yes", style: .positiveDark)
+        customLightAlert.addAction(with: "No", style: .destructiveDark)
         
-        let noAction = Action(with: "No", style: .destructiveDark) { [weak self] in
-            print("No pressed")
-            self?.dismiss(animated: true, completion: nil)
-        }
-        
-        let alertVC = createLightAlertWithActions(actions: [yesAction, noAction])
-        alertVC.modalPresentationStyle = .overCurrentContext
-        alertVC.modalTransitionStyle = .crossDissolve
-        present(alertVC, animated: true, completion: nil)
-    
+        customLightAlert.modalPresentationStyle = .overCurrentContext
+        customLightAlert.modalTransitionStyle = .crossDissolve
+        present(customLightAlert, animated: true, completion: nil)
     }
     
     func showDarkAlert() {
-        let yesAction = Action(with: "Yes", style: .positive) {[weak self] in
-                print("Yes pressed")
-                self?.dismiss(animated: true, completion: nil)
-            }
-            
-            let noAction = Action(with: "No", style: .destructive) { [weak self] in
-                print("No pressed")
-                self?.dismiss(animated: true, completion: nil)
-            }
-            
-            let alertVC = createDarkAlertWithActions(actions: [yesAction, noAction])
-            alertVC.modalPresentationStyle = .overCurrentContext
-            alertVC.modalTransitionStyle = .crossDissolve
-            present(alertVC, animated: true, completion: nil)
+        let customDarkAlert = CustomAlertViewController(withTitle: "Hi! I'm Dark Alert", message:"Do you like how I look?", axis: .horizontal, style: .dark)
+        customDarkAlert.addAction(with: "Yes", style: .positive)
+        customDarkAlert.addAction(with: "No", style: .destructive)
         
+        customDarkAlert.modalPresentationStyle = .overCurrentContext
+        customDarkAlert.modalTransitionStyle = .crossDissolve
+        present(customDarkAlert, animated: true, completion: nil)
     }
     
     func showAlertWithThreeButtons(){
-        let yesAction = Action(with: "Yes", style: .positiveDark) {[weak self] in
-            print("Yes pressed")
-            self?.dismiss(animated: true, completion: nil)
-        }
+        let customAlertWithThreeButtons = CustomAlertViewController(withTitle: "Hi! I'm Alert With Three Buttons", message:"Do you like how I look?", axis: .vertical, style: .light)
+        customAlertWithThreeButtons.addAction(with: "Yes", style: .positiveDark)
+        customAlertWithThreeButtons.addAction(with: "Maybe", style: .normalDark)
+        customAlertWithThreeButtons.addAction(with: "No", style: .destructiveDark)
         
-        let maybeAction = Action(with: "Maybe", style: .normalDark) { [weak self] in
-            print("Maybe pressed")
-            self?.dismiss(animated: true, completion: nil)
-        }
-        
-        let noAction = Action(with: "No", style: .destructiveDark) { [weak self] in
-            print("No pressed")
-            self?.dismiss(animated: true, completion: nil)
-        }
-        
-        let alertVC = createAlertWithThreeActions(actions: [yesAction, maybeAction, noAction])
-        alertVC.modalPresentationStyle = .overCurrentContext
-        alertVC.modalTransitionStyle = .crossDissolve
-        present(alertVC, animated: true, completion: nil)
+        customAlertWithThreeButtons.modalPresentationStyle = .overCurrentContext
+        customAlertWithThreeButtons.modalTransitionStyle = .crossDissolve
+        present(customAlertWithThreeButtons, animated: true, completion: nil)
     }
-    
-    private func createLightAlertWithActions(actions: [Action]) -> CustomAlertViewController{
-        let alertVC = CustomAlertViewController(withTitle: "Hi! I'm Light Alert", message:"Do you like how I look?", actions: actions, axis: .horizontal, style: .normal)
-        return alertVC
-    }
-    
-    private func createDarkAlertWithActions(actions: [Action]) -> CustomAlertViewController{
-        let alertVC = CustomAlertViewController(withTitle: "Hi! I'm Dark Alert", message:"Do you like how I look?", actions: actions, axis: .horizontal, style: .dark)
-        return alertVC
-    }
-    
-    private func createAlertWithThreeActions(actions: [Action]) -> CustomAlertViewController{
-        let alertVC = CustomAlertViewController(withTitle: "Hi! I'm Alert With Three Buttons", message:"Do you like how I look?", actions: actions, axis: .vertical, style: .normal)
-          return alertVC
-      }
-    
 }
 

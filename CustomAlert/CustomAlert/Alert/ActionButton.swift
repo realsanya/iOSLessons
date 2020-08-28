@@ -16,17 +16,17 @@ class ActionButton: UIButton {
         super.init(frame: .zero)
         self.translatesAutoresizingMaskIntoConstraints = false
         self.actionHandler = action.actionHandler
-        self.setUpButtonWith(action: action)
+        self.setUpButton(action: action)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setUpButtonWith(action: Action){
+    private func setUpButton(action: Action){
         self.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
         self.setTitle(action.title, for: .normal)
-        self.layer.cornerRadius = 5
+        self.layer.cornerRadius = 12
         addTarget(self, action: #selector(self.didTapButton), for: .touchUpInside)
         self.setUpForStyle(style: action.style)
     }
@@ -34,7 +34,7 @@ class ActionButton: UIButton {
     private func setUpForStyle(style: ActionStyle){
         self.backgroundColor = style.backgroundColor
         self.setTitleColor(style.titleColor, for: .normal)
-        self.setTitleColor(style.highlightedTitileColor, for: .highlighted)
+        self.setTitleColor(style.highlightedTitleColor, for: .highlighted)
     }
     
     @objc private func didTapButton(){

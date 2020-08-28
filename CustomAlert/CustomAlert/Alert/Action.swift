@@ -39,10 +39,10 @@ enum ActionStyle {
         }
     }
     
-    var highlightedTitileColor: UIColor {
+    var highlightedTitleColor: UIColor {
         switch self {
         case .normal, .destructive, .destructiveDark, .normalDark, .positive, .positiveDark:
-            return self.titleColor.withAlphaComponent(0.6)
+            return self.titleColor.withAlphaComponent(1.0)
         }
     }
 }
