@@ -12,7 +12,7 @@ import UIKit
 class ActionButton: UIButton {
 
 	static let font = UIFont.boldSystemFont(ofSize: 15)
-
+    
     private var actionHandler: (()->Void)?
     
     init(_ action: Action ) {
@@ -27,13 +27,13 @@ class ActionButton: UIButton {
 
 		self.heightAnchor.constraint(equalToConstant: 45).isActive = true
 
-        self.addTarget(self, action: #selector(self.didTapButton), for: .touchUpInside)
+        self.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
 
         self.setTitle(action.title, for: .normal)
-        //self.backgroundColor = action.style.backgroundColor
+        self.backgroundColor = action.backgroundColor
 
-		//self.setTitleColor(action.style.titleColor, for: .normal)
-        //self.setTitleColor(action.style.highlightedTitleColor, for: .highlighted)
+		self.setTitleColor(action.titleColor, for: .normal)
+        self.setTitleColor(action.highlightedTitleColor, for: .highlighted)
     }
 
     
@@ -43,6 +43,7 @@ class ActionButton: UIButton {
 
     
     @objc private func didTapButton(){
+        print("Ooops!")
         self.actionHandler?()
     }
     

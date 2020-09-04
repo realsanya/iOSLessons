@@ -27,89 +27,30 @@ class ViewController: UIViewController {
     }
     
     func showLightAlert() {
-        CustomAlertViewController.show("Hi! I'm Light Alert", msg: "Do you like how I look?", style: .light, buttons:[.yes, .no]  ){ press in
-           return self.dismiss(animated: true, completion: nil)
+        let lightAlert = CustomAlertViewController.show("Hi! I'm Light Alert", msg: "Do you like how I look?", style: .light, buttons:[.yes, .no]  ){ press in
+            self.dismiss(animated: true, completion: nil)
         }
-        
-//        let customLightAlert = CustomAlertViewController(withTitle: "Hi! I'm Light Alert", message:"Do you like how I look?", axis: .horizontal, style: .light)
-        
-//        customLightAlert.addAction(with: "Yes", style: .positiveDark, actionHandler:{[weak self] in
-//            print("Button \"Yes\" pressed")
-//            self?.dismiss(animated: true, completion: nil)
-//        })
-//        customLightAlert.addAction(with: "No", style: .destructiveDark, actionHandler:{[weak self] in
-//            print("Button \"No\" pressed")
-//            self?.dismiss(animated: true, completion: nil)
-//        })
-        
-//        present(customLightAlert, animated: true, completion: nil)
+        present(lightAlert, animated: true, completion: nil)
     }
     
     func showDarkAlert() {
-//        let customDarkAlert = CustomAlertViewController(withTitle: "Hi! I'm Dark Alert", message:"Do you like how I look?", axis: .horizontal, style: .dark)
-//
-//        customDarkAlert.addAction(with: "Yes", style: .positive, actionHandler:{[weak self] in
-//            print("Button \"Yes\" pressed")
-//            self?.dismiss(animated: true, completion: nil)
-//        })
-//        customDarkAlert.addAction(with: "No", style: .destructive, actionHandler:{[weak self] in
-//            print("Button \"No\" pressed")
-//            self?.dismiss(animated: true, completion: nil)
-//        })
-//
-//        present(customDarkAlert, animated: true, completion: nil)
+        print("Showed")
+         let darkAlert = CustomAlertViewController.show("Hi! I'm Dark Alert", msg: "Do you like how I look?", style: .dark, buttons:[.yes, .no]  ){ press in
+        
+//            guard let press = else {
+//                self.dismiss(animated: true, completion: nil)
+//            }}
+        }
+            present(darkAlert, animated: true, completion: nil)
     }
-
-
-//	func assd(){
-//
-//
-//
-//		CustomAlertViewController.show( "Title", msg: "msg", buttons:[ .normal(title: "Yes"), .cancel]  ){ press in
-//
-//			guard press = .m
-//
-//
-//
-//		}
-//
-//
-//
-//
-//	}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     
     func showAlertWithThreeButtons(){
-//        let customAlertWithThreeButtons = CustomAlertViewController(withTitle: "Hi! I'm Alert With Three Buttons", message:"Do you like how I look?", axis: .vertical, style: .light)
-//
-//        customAlertWithThreeButtons.addAction(with: "Yes", style: .positiveDark, actionHandler:{[weak self] in
-//            print("Button \"Yes\" pressed")
-//            self?.dismiss(animated: true, completion: nil)
-//        })
-//        customAlertWithThreeButtons.addAction(with: "Maybe", style: .normalDark,  actionHandler:{[weak self] in
-//            print("Button \"Maybe\" pressed")
-//            self?.dismiss(animated: true, completion: nil)
-//        })
-//        
-//        customAlertWithThreeButtons.addAction(with: "No", style: .destructiveDark, actionHandler:{[weak self] in
-//            print("Button \"No\" pressed")
-//            self?.dismiss(animated: true, completion: nil)
-//        })
-//
-//        present(customAlertWithThreeButtons, animated: true, completion: nil)
+        
+        let alertWithThreeButtons = CustomAlertViewController.show("Hi! I'm Dark Alert", msg: "Do you like how I look?", buttons:[.yes, .no, .cancel]  ){ press in
+                self.dismiss(animated: true, completion: nil)
+                }
+                present(alertWithThreeButtons, animated: true, completion: nil)
     }
 }
 

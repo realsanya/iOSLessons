@@ -11,7 +11,7 @@ import UIKit
 
 enum Action {
     
-	case normal (title: String)
+    case normal (title: String)
     case yes
 	case no
 	case cancel
@@ -26,8 +26,7 @@ enum Action {
 	}
 
     var titleColor: UIColor {
-            return UIColor.white
-       
+            return UIColor.black
     }
     
     var backgroundColor: UIColor {
@@ -49,8 +48,8 @@ enum Action {
 }
 
 
-
-//class Action {
+//
+//struct Action {
 //    var title: String
 //    var style: ActionStyle
 //    var actionHandler: () -> Void
