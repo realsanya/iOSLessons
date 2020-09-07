@@ -18,7 +18,7 @@ enum Action {
 
 	var title: String {
 		switch self {
-            case .normal( let title ): return title
+        case .normal( let title ): return title
             case .yes: return "Yes"
             case .no: return "No"
             case .cancel: return "Cancel"
@@ -47,16 +47,3 @@ enum Action {
     }
 }
 
-
-//
-//struct Action {
-//    var title: String
-//    var style: ActionStyle
-//    var actionHandler: () -> Void
-//
-//    init(with title: String, style: ActionStyle, actionHandler: @escaping () -> Void) {
-//        self.title = title
-//        self.style = style
-//        self.actionHandler = actionHandler
-//    }
-//}

@@ -38,36 +38,15 @@ class CustomAlertViewController: UIViewController {
 
     static func show(_ title:String, msg:String, style: AlertStyle? = .dark, buttons: [Action] = [ .normal(title: "Ok") ], handle: (( Action )->Void)? = nil ) -> UIViewController {
 
-        var butTag = 1000
         let alertVС  = CustomAlertViewController(withTitle: title, message: msg, buttons: buttons, axis: .horizontal, style: style ?? .light);
         
-		for but in buttons{
-                let actionButt = ActionButton( but )
-                actionButt.tag = butTag + 1
-                butTag = butTag + 1
-		}
-
         return alertVС
 	}
-
-
-	@objc private func didTapButton( ){
-        print("Oooops")
-
-//        switch sender.tag {
-//            case 1001: print("1")
-//                break
-//            case 1002: print("2")
-//                break
-//            case 1003: print("3")
-//                break
-//            default: print("Other")
-//        }
-        
-//        self.dismiss(animated: true, completion: nil)
+    
+    func didTapButton(){
+        self.dismiss(animated: true, completion: nil)
     }
-
-
+    
     public var alertTitle: String!
     public var alertMessage: String!
     private var actions = [Action]()
@@ -192,7 +171,11 @@ class CustomAlertViewController: UIViewController {
         self.actionsStackView.rightAnchor.constraint(equalTo: containerView.rightAnchor, constant: -24.0).isActive = true
         
         for action in actions {
-            actionsStackView.addArrangedSubview( ActionButton( action ) )
+            let actionButt = ActionButton( action: action, actionHandler: {
+                self.didTapButton()
+            })
+           
+            actionsStackView.addArrangedSubview( actionButt )
         }
         
         self.titleLabel.text = alertTitle

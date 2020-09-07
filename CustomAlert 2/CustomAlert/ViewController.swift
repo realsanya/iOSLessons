@@ -28,18 +28,14 @@ class ViewController: UIViewController {
     
     func showLightAlert() {
         let lightAlert = CustomAlertViewController.show("Hi! I'm Light Alert", msg: "Do you like how I look?", style: .light, buttons:[.yes, .no]  ){ press in
-            self.dismiss(animated: true, completion: nil)
+            
         }
         present(lightAlert, animated: true, completion: nil)
     }
     
     func showDarkAlert() {
-        print("Showed")
          let darkAlert = CustomAlertViewController.show("Hi! I'm Dark Alert", msg: "Do you like how I look?", style: .dark, buttons:[.yes, .no]  ){ press in
-        
-//            guard let press = else {
-//                self.dismiss(animated: true, completion: nil)
-//            }}
+    
         }
             present(darkAlert, animated: true, completion: nil)
     }
@@ -48,7 +44,7 @@ class ViewController: UIViewController {
     func showAlertWithThreeButtons(){
         
         let alertWithThreeButtons = CustomAlertViewController.show("Hi! I'm Dark Alert", msg: "Do you like how I look?", buttons:[.yes, .no, .cancel]  ){ press in
-                self.dismiss(animated: true, completion: nil)
+        
                 }
                 present(alertWithThreeButtons, animated: true, completion: nil)
     }

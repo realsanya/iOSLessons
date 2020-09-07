@@ -15,12 +15,12 @@ class ActionButton: UIButton {
     
     private var actionHandler: (()->Void)?
     
-    init(_ action: Action ) {
+    init( action: Action, actionHandler: (()->())?) {
 
         super.init(frame: .zero)
 
         self.translatesAutoresizingMaskIntoConstraints = false
-        //self.actionHandler = action.actionHandler
+        self.actionHandler = actionHandler
 
 		self.titleLabel?.font = ActionButton.font
         self.layer.cornerRadius = 12
@@ -43,7 +43,6 @@ class ActionButton: UIButton {
 
     
     @objc private func didTapButton(){
-        print("Ooops!")
         self.actionHandler?()
     }
     
