@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TableViewCustomCell" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RAz-wb-RMI">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" rowHeight="100" id="XRr-YU-Pbo" customClass="CustomTableViewCell" customModule="TableViewCustomCell" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XRr-YU-Pbo" id="u9v-On-Pic">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X7s-Wh-ecP">
+                                                    <rect key="frame" x="30" y="16" width="354" height="78"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat" translatesAutoresizingMaskIntoConstraints="NO" id="83o-rK-IdA">
+                                                            <rect key="frame" x="0.0" y="0.0" width="80" height="78"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="80" id="2n8-2q-AE4"/>
+                                                                <constraint firstAttribute="height" constant="80" id="Air-U1-Sz6"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dz8-Bv-13V">
+                                                            <rect key="frame" x="88" y="8" width="258" height="62"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="dz8-Bv-13V" secondAttribute="trailing" constant="8" id="2mq-2r-hkD"/>
+                                                        <constraint firstItem="dz8-Bv-13V" firstAttribute="centerY" secondItem="X7s-Wh-ecP" secondAttribute="centerY" id="38E-WQ-n88"/>
+                                                        <constraint firstItem="dz8-Bv-13V" firstAttribute="top" secondItem="X7s-Wh-ecP" secondAttribute="top" constant="8" id="5ks-kY-RoY"/>
+                                                        <constraint firstAttribute="bottom" secondItem="dz8-Bv-13V" secondAttribute="bottom" constant="8" id="9BS-AK-ODm"/>
+                                                        <constraint firstItem="83o-rK-IdA" firstAttribute="leading" secondItem="X7s-Wh-ecP" secondAttribute="leading" id="Kbd-UG-DUa"/>
+                                                        <constraint firstAttribute="bottom" secondItem="83o-rK-IdA" secondAttribute="bottom" id="fMc-q3-XOe"/>
+                                                        <constraint firstItem="83o-rK-IdA" firstAttribute="top" secondItem="X7s-Wh-ecP" secondAttribute="top" id="hIm-sQ-Mub"/>
+                                                        <constraint firstItem="83o-rK-IdA" firstAttribute="centerY" secondItem="X7s-Wh-ecP" secondAttribute="centerY" id="pb9-QF-qP0"/>
+                                                        <constraint firstItem="dz8-Bv-13V" firstAttribute="leading" secondItem="83o-rK-IdA" secondAttribute="trailing" constant="8" id="s6M-h6-GvF"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="X7s-Wh-ecP" firstAttribute="bottom" secondItem="u9v-On-Pic" secondAttribute="bottomMargin" constant="5" id="0Wd-Cc-YkD"/>
+                                                <constraint firstItem="X7s-Wh-ecP" firstAttribute="top" secondItem="u9v-On-Pic" secondAttribute="topMargin" constant="5" id="Wo5-9f-Cho"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="X7s-Wh-ecP" secondAttribute="trailing" constant="10" id="jd3-OE-9IL"/>
+                                                <constraint firstItem="X7s-Wh-ecP" firstAttribute="leading" secondItem="u9v-On-Pic" secondAttribute="leadingMargin" constant="10" id="qvs-wN-Gyo"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="animalImage" destination="83o-rK-IdA" id="6Rw-5v-lge"/>
+                                            <outlet property="animalLabel" destination="dz8-Bv-13V" id="Egm-bh-lB9"/>
+                                            <outlet property="cellView" destination="X7s-Wh-ecP" id="Izt-Hs-xYp"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="RAz-wb-RMI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9qJ-of-nhf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RAz-wb-RMI" secondAttribute="trailing" id="BAj-87-orw"/>
+                            <constraint firstItem="RAz-wb-RMI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DwQ-UJ-5YX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RAz-wb-RMI" secondAttribute="bottom" id="p6Z-5z-8rM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="RAz-wb-RMI" id="97h-sz-EGF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="116.51785714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cat" width="696" height="461"/>
+    </resources>
+</document>
