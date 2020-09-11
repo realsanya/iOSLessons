@@ -31,7 +31,6 @@ class ActionButton: UIButton {
 
         self.setTitle(action.title, for: .normal)
         self.backgroundColor = action.backgroundColor
-
 		self.setTitleColor(action.titleColor, for: .normal)
         self.setTitleColor(action.highlightedTitleColor, for: .highlighted)
     }

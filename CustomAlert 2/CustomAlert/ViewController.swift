@@ -27,26 +27,16 @@ class ViewController: UIViewController {
     }
     
     func showLightAlert() {
-        let lightAlert = CustomAlertViewController.show("Hi! I'm Light Alert", msg: "Do you like how I look?", style: .light, buttons:[.yes, .no]  ){ press in
-            
-        }
-        present(lightAlert, animated: true, completion: nil)
+        CustomAlertViewController.show("Hi! I'm Light Alert", msg: "Do you like how I look?", style: .light, buttons:[.yes, .no])
     }
     
     func showDarkAlert() {
-         let darkAlert = CustomAlertViewController.show("Hi! I'm Dark Alert", msg: "Do you like how I look?", style: .dark, buttons:[.yes, .no]  ){ press in
-    
-        }
-            present(darkAlert, animated: true, completion: nil)
+        CustomAlertViewController.show("Hi! I'm Dark Alert", msg: "Do you like how I look?", style: .dark, buttons:[.yes, .no])
     }
 
     
     func showAlertWithThreeButtons(){
-        
-        let alertWithThreeButtons = CustomAlertViewController.show("Hi! I'm Dark Alert", msg: "Do you like how I look?", buttons:[.yes, .no, .cancel]  ){ press in
-        
-                }
-                present(alertWithThreeButtons, animated: true, completion: nil)
+            CustomAlertViewController.show("Hi! I'm Dark Alert", msg: "Do you like how I look?", buttons:[.yes, .no, .cancel])
     }
 }
 
