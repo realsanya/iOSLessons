@@ -8,32 +8,6 @@
 
 import UIKit
 
-//MARK: -AlertStyle
-enum AlertStyle: Int{
-    case light
-    case dark
-    
-    var backgroundColor: UIColor {
-        switch self {
-        case .light:
-            return UIColor.white
-        case .dark:
-            return UIColor.black.withAlphaComponent(0.8)
-        }
-    }
-    
-    var textColor: UIColor {
-        switch self {
-        case .light:
-            return UIColor.black
-        case.dark:
-            return UIColor.white
-        }
-    }
-}
-
-//MARK: -CustomAlertViewController
-
 class CustomAlertViewController: UIViewController {
     
     public var alertTitle: String!
@@ -94,15 +68,18 @@ class CustomAlertViewController: UIViewController {
     static func show(_ title:String, msg:String, style: AlertStyle? = .dark, buttons: [Action] = [ .normal(title: "Ok") ], handle: (( Action )->Void)? = nil )  {
         let alertVС  = CustomAlertViewController(withTitle: title, message: msg, buttons: buttons, axis: .horizontal, style: style ?? .light);
         
-        UIApplication.shared.keyWindow?.rootViewController?.present(alertVС, animated: true, completion: nil)
+        //?????
+        UIApplication.topViewController()?.present(alertVС, animated: false, completion: nil)
         
+        //UIApplication.shared.keyWindow?.rootViewController?.present(alertVС, animated: true, completion: nil)
+
     }
     
     func didTapButton(){
         self.dismiss(animated: true, completion: nil)
     }
     
-//MARK: -setUpUI
+//MARK: -
 
     private func setUpUI(){
         
@@ -171,4 +148,25 @@ class CustomAlertViewController: UIViewController {
             actionsStackView.addArrangedSubview( actionButt )
         }
     }
+}
+
+
+//?????????
+extension UIApplication {
+    
+  class func topViewController(controller: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+    
+        if let tabController = controller as? UITabBarController {
+            return topViewController(controller: tabController.selectedViewController)
+        }
+    
+        if let navController = controller as? UINavigationController {
+            return topViewController(controller: navController.visibleViewController)
+        }
+    
+        if let presented = controller?.presentedViewController {
+            return topViewController(controller: presented)
+        }
+        return controller
+  }
 }
