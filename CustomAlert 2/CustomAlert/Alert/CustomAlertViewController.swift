@@ -19,18 +19,8 @@ class CustomAlertViewController: UIViewController {
     public var _modalPresentationStyle: UIModalPresentationStyle = .overCurrentContext
     public var _modalTransitionStyle: UIModalTransitionStyle = .crossDissolve
     
-    private lazy var backdropView: UIView = {
-        let view = BackdropView(frame: .null, backgroundColor: UIColor.black.withAlphaComponent(0.0), cornerRadius: 0.0)
-        return view
-    } ()
-    
-    private lazy var containerView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = alertStyle.backgroundColor
-        view.layer.cornerRadius = 10.0
-        return view
-        }()
+    private var backdropView = BackdropView(frame: .null, backgroundColor: UIColor.black.withAlphaComponent(0.0), cornerRadius: 0.0)
+    private var containerView = UIView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,11 +58,8 @@ class CustomAlertViewController: UIViewController {
     static func show(_ title:String, msg:String, style: AlertStyle? = .dark, buttons: [Action] = [ .normal(title: "Ok") ], handle: (( Action )->Void)? = nil )  {
         let alertVС  = CustomAlertViewController(withTitle: title, message: msg, buttons: buttons, axis: .horizontal, style: style ?? .light);
         
-        //?????
-        UIApplication.topViewController()?.present(alertVС, animated: false, completion: nil)
-        
-        //UIApplication.shared.keyWindow?.rootViewController?.present(alertVС, animated: true, completion: nil)
-
+        //?
+        UIApplication.shared.keyWindow?.rootViewController?.present(alertVС, animated: true, completion: nil)
     }
     
     func didTapButton(){
@@ -82,6 +69,10 @@ class CustomAlertViewController: UIViewController {
 //MARK: -
 
     private func setUpUI(){
+        
+        containerView.translatesAutoresizingMaskIntoConstraints = false
+        containerView.backgroundColor = alertStyle.backgroundColor
+        containerView.layer.cornerRadius = 10.0
         
         let titleLabel = UILabel()
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -150,23 +141,3 @@ class CustomAlertViewController: UIViewController {
     }
 }
 
-
-//?????????
-extension UIApplication {
-    
-  class func topViewController(controller: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
-    
-        if let tabController = controller as? UITabBarController {
-            return topViewController(controller: tabController.selectedViewController)
-        }
-    
-        if let navController = controller as? UINavigationController {
-            return topViewController(controller: navController.visibleViewController)
-        }
-    
-        if let presented = controller?.presentedViewController {
-            return topViewController(controller: presented)
-        }
-        return controller
-  }
-}

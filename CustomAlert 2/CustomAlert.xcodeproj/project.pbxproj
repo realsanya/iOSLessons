@@ -47,6 +47,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E70FF71F250FA40B001E9A79 /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				E78A11DC24F3B264004A15CD /* ViewController.swift */,
+				E78A11DE24F3B264004A15CD /* Main.storyboard */,
+			);
+			path = MainVC;
+			sourceTree = "<group>";
+		};
 		E78A11CC24F3B264004A15CD = {
 			isa = PBXGroup;
 			children = (
@@ -66,11 +75,10 @@
 		E78A11D724F3B264004A15CD /* CustomAlert */ = {
 			isa = PBXGroup;
 			children = (
+				E70FF71F250FA40B001E9A79 /* MainVC */,
 				E78A11EC24F3B5ED004A15CD /* Alert */,
 				E78A11D824F3B264004A15CD /* AppDelegate.swift */,
 				E78A11DA24F3B264004A15CD /* SceneDelegate.swift */,
-				E78A11DC24F3B264004A15CD /* ViewController.swift */,
-				E78A11DE24F3B264004A15CD /* Main.storyboard */,
 				E78A11E124F3B265004A15CD /* Assets.xcassets */,
 				E78A11E324F3B265004A15CD /* LaunchScreen.storyboard */,
 				E78A11E624F3B265004A15CD /* Info.plist */,

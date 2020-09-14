@@ -15,28 +15,15 @@ class ViewController: UIViewController {
     @IBOutlet var alertWithThreeButtons: UIButton!
 
     @IBAction func lightAlertAction() {
-        showLightAlert()
-    }
-    
-    @IBAction func darkAlertAction() {
-        showDarkAlert()
-    }
-    
-    @IBAction func alertWithThreeButtonsAction() {
-        showAlertWithThreeButtons()
-    }
-    
-    func showLightAlert() {
         CustomAlertViewController.show("Hi! I'm Light Alert", msg: "Do you like how I look?", style: .light, buttons:[.yes, .no])
     }
     
-    func showDarkAlert() {
+    @IBAction func darkAlertAction() {
         CustomAlertViewController.show("Hi! I'm Dark Alert", msg: "Do you like how I look?", style: .dark, buttons:[.yes, .no])
     }
-
     
-    func showAlertWithThreeButtons(){
-            CustomAlertViewController.show("Hi! I'm Dark Alert", msg: "Do you like how I look?", buttons:[.yes, .no, .cancel])
+    @IBAction func alertWithThreeButtonsAction() {
+       CustomAlertViewController.show("Hi! I'm Dark Alert", msg: "Do you like how I look?", buttons:[.yes, .no, .cancel])
     }
 }
 
